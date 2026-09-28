@@ -1,0 +1,120 @@
+@Metadata.layer: #CUSTOMER
+
+@UI.headerInfo: { typeName: 'Movimiento',
+                  typeNamePlural: 'Movimientos',
+                  title: { type: #STANDARD, label: 'Movimientos importados', value: 'Iditem' } }
+
+annotate entity ZC_FEBP with
+
+{
+  @UI.facet: [ { id: 'idBankStatement', type: #IDENTIFICATION_REFERENCE, label: 'Datos del movimiento', position: 10 } ]
+  @UI.hidden: true
+  @UI.identification: [ { position: 10 } ]
+  @UI.lineItem: [ { position: 10, importance: #HIGH } ]
+  @UI.selectionField: [ { position: 10 } ]
+  SapUuid;
+
+  @UI.hidden: true
+  @UI.identification: [ { position: 20 } ]
+  @UI.lineItem: [ { position: 20, importance: #HIGH } ]
+  @UI.selectionField: [ { position: 20 } ]
+  SapParentUuid;
+
+  @EndUserText.label: 'Fecha contabilización'
+  @UI.identification: [ { position: 30 } ]
+  @UI.lineItem: [ { position: 30, importance: #HIGH } ]
+  @UI.selectionField: [ { position: 30 } ]
+  Bankpostingdate;
+
+  @EndUserText.label: 'Fecha valor'
+  @UI.identification: [ { position: 40 } ]
+  @UI.lineItem: [ { position: 40, importance: #HIGH } ]
+  Bankvaluedate;
+
+  @EndUserText.label: 'Importe'
+  @UI.identification: [ { position: 50 } ]
+  @UI.lineItem: [ { position: 50, importance: #HIGH } ]
+  @UI.selectionField: [ { position: 50 } ]
+  Amountinbankaccountcurrency;
+
+  @EndUserText.label: 'Comisión'
+  @UI.identification: [ { position: 60 } ]
+  @UI.lineItem: [ { position: 60, importance: #HIGH } ]
+  Feeamountintransactioncrcy;
+
+  @EndUserText.label: 'Código de operación'
+  @UI.identification: [ { position: 70 } ]
+  @UI.lineItem: [ { position: 70, importance: #HIGH } ]
+  @UI.selectionField: [ { position: 70 } ]
+  Paymenttransactioncode;
+
+  @EndUserText.label: 'Debe/Haber'
+  @UI.identification: [ { position: 80 } ]
+  @UI.lineItem: [ { position: 80, importance: #HIGH } ]
+  Debitcreditcode;
+
+  @EndUserText.label: 'Cheque'
+  @UI.identification: [ { position: 90 } ]
+  @UI.lineItem: [ { position: 90, importance: #HIGH } ]
+  @UI.selectionField: [ { position: 90 } ]
+  Ebscheck;
+
+  @EndUserText.label: 'Interlocutor comercial'
+  @UI.identification: [ { position: 95 } ]
+  @UI.lineItem: [ { position: 95, importance: #HIGH } ]
+  BusinessPartner;
+
+  @EndUserText.label: 'Descripción 1'
+  @UI.lineItem: [ { position: 100, importance: #HIGH } ]
+  Bankstatementitemdescription1;
+
+  @EndUserText.label: 'Descripción 2'
+  @UI.identification: [ { position: 110 } ]
+  @UI.lineItem: [ { position: 110, importance: #HIGH } ]
+  Bankstatementitemdescription2;
+
+  @EndUserText.label: 'Concepto'
+  @UI.identification: [ { position: 120 } ]
+  @UI.lineItem: [ { position: 120, importance: #HIGH } ]
+  @UI.selectionField: [ { position: 120 } ]
+  Notetopayeeinbankstatement;
+
+  @EndUserText.label: 'Nº movimiento'
+  @UI.identification: [ { position: 130 } ]
+  @UI.lineItem: [ { position: 130, importance: #HIGH } ]
+  @UI.selectionField: [ { position: 130 } ]
+  Iditem;
+
+  @EndUserText.label: 'Nº concepto'
+  @UI.identification: [ { position: 140 } ]
+  @UI.lineItem: [ { position: 140, importance: #HIGH } ]
+  @UI.selectionField: [ { position: 140 } ]
+  Iddescriptionitem;
+
+  @EndUserText.label: 'Línea del fichero'
+  @UI.identification: [ { position: 150 } ]
+  @UI.lineItem: [ { position: 150, importance: #MEDIUM } ]
+  @UI.selectionField: [ { position: 150 } ]
+  Fileitemdata;
+
+  @EndUserText.label: 'Creado por'
+  @UI.identification: [ { position: 160 } ]
+  @UI.lineItem: [ { position: 160, importance: #LOW } ]
+  CreatedBy;
+
+  @EndUserText.label: 'Creado el'
+  @UI.identification: [ { position: 170 } ]
+  @UI.lineItem: [ { position: 170, importance: #LOW } ]
+  @UI.selectionField: [ { position: 170 } ]
+  CreatedAt;
+
+  @EndUserText.label: 'Modificado por'
+  @UI.identification: [ { position: 180 } ]
+  @UI.lineItem: [ { position: 180, importance: #LOW } ]
+  LastChangedBy;
+
+  @EndUserText.label: 'Modificado el'
+  @UI.identification: [ { position: 190 } ]
+  @UI.lineItem: [ { position: 190, importance: #LOW } ]
+  LastChangedAt;
+}

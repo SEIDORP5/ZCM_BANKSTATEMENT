@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "Monitor Extractos Electrónicos",
+    "originalLanguage": "es",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Monitor Extractos Electrónicos"
+  },
+  "ui5AppDetails": {
+    "appId": "zbank_statement"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_2407B65D7F843FC149AD04E0335222AD6E51C0AE_TM",
+    "semanticObject": "zbankstmt",
+    "action": "manage",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_2407B65D7F843FC149AD04E0335222AD6E51C0AE_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Monitor Extractos Electrónicos"
+      }
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Log de aplicación Extracto",
+    "originalLanguage": "es",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "subobjects": [
+    {
+      "name": "ZALS_BANKSTATEMENT",
+      "description": "Sublog de aplicación Extracto"
+    }
+  ]
+}

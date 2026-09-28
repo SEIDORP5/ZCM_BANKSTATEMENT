@@ -1,0 +1,29 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Extracto electrónico: Procesado",
+    "originalLanguage": "es",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "catalogName": "ZJC_BANKSTATEMENT"
+  },
+  "parameters": {
+    "singleValueParameters": [
+      {
+        "name": "P_STATUS",
+        "value": "N"
+      }
+    ],
+    "valueRangesParameters": [
+      {
+        "name": "S_FILEDA",
+        "valueRanges": []
+      },
+      {
+        "name": "S_FILENA",
+        "valueRanges": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>ZMC_BANKSTATEMENT</ARBGB>
+    <MASTERLANG>S</MASTERLANG>
+    <STEXT>Mensajes del motor de extractos bancarios</STEXT>
+   </T100A>
+   <T100>
+    <T100>
+     <SPRSL>S</SPRSL>
+     <ARBGB>ZMC_BANKSTATEMENT</ARBGB>
+     <MSGNR>001</MSGNR>
+     <TEXT>Iniciando proceso de &amp;1 fichero(s)</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>S</SPRSL>
+     <ARBGB>ZMC_BANKSTATEMENT</ARBGB>
+     <MSGNR>002</MSGNR>
+     <TEXT>Fichero &amp;1: &amp;2</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>S</SPRSL>
+     <ARBGB>ZMC_BANKSTATEMENT</ARBGB>
+     <MSGNR>003</MSGNR>
+     <TEXT>Formato de fichero no válido: separadores no reconocidos</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>S</SPRSL>
+     <ARBGB>ZMC_BANKSTATEMENT</ARBGB>
+     <MSGNR>004</MSGNR>
+     <TEXT>Fichero vacío tras la decodificación</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>S</SPRSL>
+     <ARBGB>ZMC_BANKSTATEMENT</ARBGB>
+     <MSGNR>005</MSGNR>
+     <TEXT>Fichero &amp;1 analizado correctamente</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>S</SPRSL>
+     <ARBGB>ZMC_BANKSTATEMENT</ARBGB>
+     <MSGNR>006</MSGNR>
+     <TEXT>El fichero &amp;1 ya se procesó anteriormente (estado &amp;2)</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>S</SPRSL>
+     <ARBGB>ZMC_BANKSTATEMENT</ARBGB>
+     <MSGNR>007</MSGNR>
+     <TEXT>&amp;1 extracto(s) analizado(s) correctamente</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>S</SPRSL>
+     <ARBGB>ZMC_BANKSTATEMENT</ARBGB>
+     <MSGNR>008</MSGNR>
+     <TEXT>No hay ficheros que procesar tras el control de duplicados</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>S</SPRSL>
+     <ARBGB>ZMC_BANKSTATEMENT</ARBGB>
+     <MSGNR>009</MSGNR>
+     <TEXT>Error al registrar los extractos en el monitor</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>S</SPRSL>
+     <ARBGB>ZMC_BANKSTATEMENT</ARBGB>
+     <MSGNR>010</MSGNR>
+     <TEXT>Extractos registrados correctamente en el monitor EBS</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>S</SPRSL>
+     <ARBGB>ZMC_BANKSTATEMENT</ARBGB>
+     <MSGNR>011</MSGNR>
+     <TEXT>&amp;1 extracto(s) guardado(s) en el monitor</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>S</SPRSL>
+     <ARBGB>ZMC_BANKSTATEMENT</ARBGB>
+     <MSGNR>012</MSGNR>
+     <TEXT>Extracto sin movimientos</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>S</SPRSL>
+     <ARBGB>ZMC_BANKSTATEMENT</ARBGB>
+     <MSGNR>013</MSGNR>
+     <TEXT>Extracto contabilizado con el número &amp;1</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>S</SPRSL>
+     <ARBGB>ZMC_BANKSTATEMENT</ARBGB>
+     <MSGNR>014</MSGNR>
+     <TEXT>Error al contabilizar el extracto</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>S</SPRSL>
+     <ARBGB>ZMC_BANKSTATEMENT</ARBGB>
+     <MSGNR>015</MSGNR>
+     <TEXT>Error de comunicación SOAP</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>S</SPRSL>
+     <ARBGB>ZMC_BANKSTATEMENT</ARBGB>
+     <MSGNR>016</MSGNR>
+     <TEXT>Error de sistema en el envío</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>S</SPRSL>
+     <ARBGB>ZMC_BANKSTATEMENT</ARBGB>
+     <MSGNR>017</MSGNR>
+     <TEXT>Envío finalizado: &amp;1 correctos, &amp;2 con error, &amp;3 sin movimientos</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>S</SPRSL>
+     <ARBGB>ZMC_BANKSTATEMENT</ARBGB>
+     <MSGNR>018</MSGNR>
+     <TEXT>No se ha encontrado el Communication Arrangement &amp;1</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>S</SPRSL>
+     <ARBGB>ZMC_BANKSTATEMENT</ARBGB>
+     <MSGNR>019</MSGNR>
+     <TEXT>Conexión con el servicio de extractos establecida</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>S</SPRSL>
+     <ARBGB>ZMC_BANKSTATEMENT</ARBGB>
+     <MSGNR>020</MSGNR>
+     <TEXT>Error al preparar la conexión con el servicio</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>S</SPRSL>
+     <ARBGB>ZMC_BANKSTATEMENT</ARBGB>
+     <MSGNR>021</MSGNR>
+     <TEXT>Extracto &amp;1 no encontrado en el monitor</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>S</SPRSL>
+     <ARBGB>ZMC_BANKSTATEMENT</ARBGB>
+     <MSGNR>022</MSGNR>
+     <TEXT>Error al actualizar el estado del extracto &amp;1</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>S</SPRSL>
+     <ARBGB>ZMC_BANKSTATEMENT</ARBGB>
+     <MSGNR>023</MSGNR>
+     <TEXT>Error al confirmar los cambios del extracto &amp;1</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>S</SPRSL>
+     <ARBGB>ZMC_BANKSTATEMENT</ARBGB>
+     <MSGNR>024</MSGNR>
+     <TEXT>Buscando extractos pendientes en el monitor</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>S</SPRSL>
+     <ARBGB>ZMC_BANKSTATEMENT</ARBGB>
+     <MSGNR>025</MSGNR>
+     <TEXT>Procesando &amp;1 extracto(s) seleccionado(s)</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>S</SPRSL>
+     <ARBGB>ZMC_BANKSTATEMENT</ARBGB>
+     <MSGNR>026</MSGNR>
+     <TEXT>No se han encontrado extractos pendientes de procesar</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>S</SPRSL>
+     <ARBGB>ZMC_BANKSTATEMENT</ARBGB>
+     <MSGNR>027</MSGNR>
+     <TEXT>&amp;1 extracto(s) encontrado(s) en el monitor</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>S</SPRSL>
+     <ARBGB>ZMC_BANKSTATEMENT</ARBGB>
+     <MSGNR>028</MSGNR>
+     <TEXT>Proceso finalizado: &amp;1 extracto(s) enviado(s)</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>S</SPRSL>
+     <ARBGB>ZMC_BANKSTATEMENT</ARBGB>
+     <MSGNR>029</MSGNR>
+     <TEXT>Error técnico durante el proceso</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>S</SPRSL>
+     <ARBGB>ZMC_BANKSTATEMENT</ARBGB>
+     <MSGNR>030</MSGNR>
+     <TEXT>Error de análisis del fichero CSB43</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>S</SPRSL>
+     <ARBGB>ZMC_BANKSTATEMENT</ARBGB>
+     <MSGNR>031</MSGNR>
+     <TEXT>Proceso de fondo encolado (&amp;1 extracto(s))</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>S</SPRSL>
+     <ARBGB>ZMC_BANKSTATEMENT</ARBGB>
+     <MSGNR>032</MSGNR>
+     <TEXT>Error al encolar el proceso de fondo</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>S</SPRSL>
+     <ARBGB>ZMC_BANKSTATEMENT</ARBGB>
+     <MSGNR>033</MSGNR>
+     <TEXT>Error al confirmar los cambios en la base de datos</TEXT>
+    </T100>
+   </T100>
+  </asx:values>
+ </asx:abap>
+</abapGit>

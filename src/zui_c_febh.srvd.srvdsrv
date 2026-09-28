@@ -1,0 +1,6 @@
+@EndUserText.label: 'Bank Statement'
+define service ZUI_C_FEBH {
+  expose Zc_Febh;
+  expose ZC_FEBP;
+  expose ZC_FEBH_LOG as Log;
+}

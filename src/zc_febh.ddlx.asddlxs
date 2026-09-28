@@ -1,0 +1,82 @@
+@Metadata.layer: #CORE
+
+@UI: {
+  headerInfo: { typeName: 'Extracto bancario', typeNamePlural: 'Extractos',
+                title: { value: 'Bankstatement' }, description: { value: 'Iban' } },
+  presentationVariant: [ { sortOrder: [ { by: 'CalculationDate', direction: #DESC } ] } ]
+}
+
+annotate view Zc_Febh with
+{
+  @UI.facet: [
+    { id: 'dpEstado',  purpose: #HEADER, type: #DATAPOINT_REFERENCE, position: 10, targetQualifier: 'dpStatus' },
+    { id: 'dpCierre',  purpose: #HEADER, type: #DATAPOINT_REFERENCE, position: 20, targetQualifier: 'dpClosing' },
+    { id: 'General',   label: 'General',    purpose: #STANDARD, position: 10, type: #IDENTIFICATION_REFERENCE },
+    { id: 'Importes',  label: 'Importes',   purpose: #STANDARD, position: 20, type: #FIELDGROUP_REFERENCE, targetQualifier: 'fgAmounts' },
+    { id: 'Posiciones', label: 'Posiciones', purpose: #STANDARD, position: 25, type: #LINEITEM_REFERENCE, targetElement: '_FEBP' },
+    { id: 'Log',       label: 'Log de proceso', purpose: #STANDARD, position: 30, type: #LINEITEM_REFERENCE, targetElement: '_Log' } ]
+
+  // Estado (semáforo)
+  @EndUserText.label: 'Estado'
+  @UI.dataPoint:      { title: 'Estado', qualifier: 'dpStatus', criticality: 'CriticalityStatus', criticalityRepresentation: #WITH_ICON }
+  @UI.lineItem:       [ { position: 10, criticality: 'CriticalityStatus', criticalityRepresentation: #WITH_ICON, importance: #HIGH } ]
+  @UI.identification: [ { position: 10, criticality: 'CriticalityStatus', criticalityRepresentation: #WITH_ICON } ]
+  status;
+
+  @UI.hidden: true
+  CriticalityStatus;
+
+  // Saldo de cierre como KPI en cabecera
+  @EndUserText.label: 'Saldo cierre'
+  @UI.dataPoint:      { title: 'Saldo cierre', qualifier: 'dpClosing' }
+  @UI.identification: [ { position: 20 } ]
+  @UI.lineItem:       [ { position: 20, importance: #HIGH } ]
+  clsgbalamtinbkacctcrcyCalc;
+
+  @EndUserText.label: 'Saldo apertura'
+  @UI.identification: [ { position: 25 } ]
+  @UI.lineItem:       [ { position: 25, importance: #LOW } ]
+  OpeningbalamtinbankacctcCalc;
+
+  @EndUserText.label: 'Nº extracto'
+  @UI.lineItem:       [ { position: 30, importance: #HIGH } ]
+  @UI.identification: [ { position: 30 } ]
+  @UI.selectionField: [ { position: 10 } ]
+  Bankstatement;
+
+  @EndUserText.label: 'IBAN'
+  @UI.lineItem:       [ { position: 40, importance: #MEDIUM } ]
+  @UI.identification: [ { position: 40 } ]
+  @UI.selectionField: [ { position: 20 } ]
+  Iban;
+
+  @EndUserText.label: 'Inicio periodo'
+  @UI.lineItem:       [ { position: 50, importance: #MEDIUM } ]
+  @UI.identification: [ { position: 50 } ]
+  Periodstartdate;
+
+  @EndUserText.label: 'Fin periodo'
+  @UI.lineItem:       [ { position: 60, importance: #MEDIUM } ]
+  @UI.identification: [ { position: 60 } ]
+  Periodenddate;
+
+  // Debe/Haber agrupados
+  @EndUserText.label: 'Total debe'
+  @UI.fieldGroup: [ { position: 10, qualifier: 'fgAmounts', label: 'Total debe' } ]
+  @UI.lineItem:   [ { position: 70, importance: #LOW } ]
+  TotaldebitamtinbkacctcrcCalc;
+
+  @EndUserText.label: 'Total haber'
+  @UI.fieldGroup: [ { position: 20, qualifier: 'fgAmounts', label: 'Total haber' } ]
+  @UI.lineItem:   [ { position: 80, importance: #LOW } ]
+  TotalcreditamtinbkacctcrCalc;
+
+  @EndUserText.label: 'Nº movimientos'
+  @UI.lineItem:       [ { position: 90, importance: #MEDIUM } ]
+  @UI.identification: [ { position: 90 } ]
+  Bankstatementnumberofitems;
+
+  @EndUserText.label: 'Mensaje'
+  @UI.lineItem:       [ { position: 100, importance: #LOW, cssDefault.width: '15rem' } ]
+  message;
+}

@@ -1,0 +1,22 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Extracto electrónico: Procesado",
+    "originalLanguage": "es",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "className": "ZCL_APJ_BANKSTATEMENT"
+  },
+  "parameters": [
+    {
+      "name": "S_FILENA"
+    },
+    {
+      "name": "S_FILEDA"
+    },
+    {
+      "name": "P_STATUS"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>ZCL_BANKSTATEMENT_LOGGER</CLSNAME>
+    <LANGU>E</LANGU>
+    <DESCRIPT>Centralized Logging</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BANKSTATEMENT_LOGGER</CLSNAME>
+     <CMPNAME>IP_CLEAR_STATEMENT</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Cierra el contexto de extracto</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BANKSTATEMENT_LOGGER</CLSNAME>
+     <CMPNAME>IP_FLUSH_TO_BALI</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Persiste los buffers en BALI</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BANKSTATEMENT_LOGGER</CLSNAME>
+     <CMPNAME>IP_GET_LOGS</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Devuelve la traza acumulada en memoria</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BANKSTATEMENT_LOGGER</CLSNAME>
+     <CMPNAME>IP_LOG_ERROR</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Registra un error</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BANKSTATEMENT_LOGGER</CLSNAME>
+     <CMPNAME>IP_LOG_INFO</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Registra un mensaje informativo</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BANKSTATEMENT_LOGGER</CLSNAME>
+     <CMPNAME>IP_LOG_WARNING</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Registra un aviso</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BANKSTATEMENT_LOGGER</CLSNAME>
+     <CMPNAME>IP_SET_STATEMENT</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Fija el extracto en curso</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

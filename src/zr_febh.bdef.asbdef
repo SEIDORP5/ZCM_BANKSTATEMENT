@@ -1,0 +1,117 @@
+managed implementation in class zbp_r_febh unique;
+strict ( 2 );
+with draft;
+
+define behavior for ZR_FEBH alias febh
+persistent table zafebh
+with additional save
+draft table zafebhd
+lock master total etag LastChangedAt
+etag master LastChangedAt
+authorization master ( global )
+
+{
+  create;
+  update;
+  delete;
+
+  /* Draft actions */
+  draft action Edit;
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare;
+
+  static action processfiles;
+
+  event bgPFFinished for side effects;
+
+  side effects
+  {
+    event bgPFFinished affects field status, field message;
+  }
+
+  field ( numbering : managed, readonly : update )
+  Sapuuid;
+
+  association _FEBP { create; with draft; }
+
+  mapping for zafebh
+    {
+      Sapuuid                    = sapuuid;
+      Externalid                 = externalid;
+      Bankstatement              = bankstatement;
+      Filename                   = filename;
+      Bankcountry                = bankcountry;
+      Banknumber                 = banknumber;
+      Bankaccount                = bankaccount;
+      Iban                       = iban;
+      Swift                      = swift;
+      Fileheaddata               = fileheaddata;
+      Ebsformat                  = ebsformat;
+      Periodstartdate            = periodstartdate;
+      Periodenddate              = periodenddate;
+      Currency                   = currency;
+      Openingbalamtinbankacctc   = openingbalamtinbankacctc;
+      Clsgbalamtinbkacctcrcy     = clsgbalamtinbkacctcrcy;
+      Totaldebitamtinbkacctcrc   = totaldebitamtinbkacctcrc;
+      Totalcreditamtinbkacctcr   = totalcreditamtinbkacctcr;
+      Bankstatementnumberofitems = bankstatementnumberofitems;
+      Filecreationdate           = filecreationdate;
+      CalculationDate            = calculatedpostingdate;
+      status                     = status;
+      message                    = message;
+      bgPFMonitor                = bgpf_monitor;
+      bgPFName                   = bgpf_name;
+      CreatedBy                  = created_by;
+      CreatedAt                  = created_at;
+      LastChangedBy              = last_changed_by;
+      LastChangedAt              = last_changed_at;
+    }
+
+}
+
+define behavior for ZR_FEBP alias febp
+persistent table zafebp
+draft table zafebpd
+etag master LastChangedAt
+lock dependent by _FEBH
+authorization dependent by _FEBH
+
+{
+  update;
+  delete;
+
+  field ( numbering : managed, readonly : update )
+  SapUUID;
+
+  field ( readonly )
+  SapParentUuid;
+
+  association _FEBH { with draft; }
+
+  mapping for zafebp
+    {
+      SapUuid                       = sap_uuid;
+      SapParentUuid                 = sap_parent_uuid;
+      Bankpostingdate               = bankpostingdate;
+      Bankvaluedate                 = bankvaluedate;
+      Amountinbankaccountcurrency   = amountinbankaccountcurrency;
+      Feeamountintransactioncrcy    = feeamountintransactioncrcy;
+      Paymenttransactioncode        = paymenttransactioncode;
+      Debitcreditcode               = debitcreditcode;
+      Ebscheck                      = ebscheck;
+      BusinessPartner               = businesspartner;
+      Bankstatementitemdescription1 = bankstatementitemdescription1;
+      Bankstatementitemdescription2 = bankstatementitemdescription2;
+      Notetopayeeinbankstatement    = notetopayeeinbankstatement;
+      Iditem                        = iditem;
+      Iddescriptionitem             = iddescriptionitem;
+      Fileitemdata                  = fileitemdata;
+      CreatedBy                     = created_by;
+      CreatedAt                     = created_at;
+      LastChangedBy                 = last_changed_by;
+      LastChangedAt                 = last_changed_at;
+    }
+
+}
